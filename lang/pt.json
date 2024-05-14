@@ -1,0 +1,42 @@
+{
+  "GUISMI": {
+    "attributes": {
+      "Str": { "long": "Força", "abbr": "for" },
+      "Con": { "long": "Constituição", "abbr": "con" },      
+      "Dex": { "long": "Destreza", "abbr": "des" },
+      "Agi": { "long": "Agilidade", "abbr": "agi" },
+      "Int": { "long": "Inteligência", "abbr": "int" },
+      "Wis": { "long": "Sabedoria", "abbr": "sab" },
+      "Cha": { "long": "Carisma", "abbr": "car" }
+    },
+    "SheetLabels": {
+      "Actor": "Guismi Actor Sheet",
+      "Item": "Guismi Item Sheet"
+    },
+    "Item": {
+      "Spell": {
+        "SpellLVL": "Level {level} Spells",
+        "AddLVL": "Add LVL {level}"
+      }
+    },
+    "Effect": {
+      "Source": "Source",
+      "Toggle": "Toggle Effect",
+      "Temporary": "Temporary Effects",
+      "Passive": "Passive Effects",
+      "Inactive": "Inactive Effects"
+    }
+  },
+
+  "TYPES": {
+    "Actor": {
+      "character": "Character",
+      "npc": "NPC"
+    },
+    "Item": {
+      "item": "Item",
+      "feature": "Feature",
+      "spell": "Spell"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+<div>
+  <table>
+    <tr>
+      <th>Atributos</th>
+      <th>R</th>
+      <th>DS</th>
+      <th>BG</th>
+      <th>TT</th>
+      <th>M2</th>
+      <th>M5</th>
+    </tr>
+    {{#each system.attributes as |attibute key|}}
+    <tr>
+      <td>
+        <label>{{attibute.abbr}}</label>
+      </td>
+      <td>
+        <span data-dtype="Number">{{attibute.background}}</span>
+      </td>
+      <td>
+        <input type="text" name="system.attributes.{{key}}.allocated" value="{{attibute.allocated}}"
+          data-dtype="Number" />
+      </td>
+      <td>
+        <input type="text" name="system.attributes.{{key}}.bonus" value="{{attibute.bonus}}" data-dtype="Number" />
+      </td>
+      <td>
+        <span>{{attibute.total}}</span>
+      </td>
+      <td>
+        <span class="rollable" data-roll="d100+@attributes.{{key}}.mod2" data-label="{{attibute.label}}">{{numberFormat
+          attibute.mod2 decimals=0}}</span>
+      </td>
+      <td>
+        <span class="rollable" data-roll="d100+@attributes.{{key}}.mod5" data-label="{{attibute.label}}">{{numberFormat
+          attibute.mod5 decimals=0}}</span>
+      </td>
+    </tr>
+    {{/each}}
+  </table>
+  <div>
+    <div>
+      <label>Reflexos</label>
+      <span class="rollable" data-roll="d100+@reflexes" data-label="reflexes">
+        {{numberFormat system.reflexes decimals=0}}
+      </span>
+      <label>Fortitude</label>
+      <span class="rollable" data-roll="d100+@fortitude" data-label="fortitude">
+        {{numberFormat system.fortitude decimals=0}}
+      </span>
+      <label>Vontade</label>
+      <span class="rollable" data-roll="d100+@willpower" data-label="willpower">{{numberFormat system.willpower decimals=0}}</span>
+      <label>Pontos de Ação</label>
+      <span>{{numberFormat system.actionPoints decimals=0}}</span>
+    </div>
+  </div>
+</div>
